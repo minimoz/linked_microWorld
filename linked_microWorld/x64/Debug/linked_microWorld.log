@@ -1,0 +1,19 @@
+﻿Build started 21/02/2016 16:45:01.
+     1>Project "C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\linked_microWorld.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include" /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt sources\ResourceManager.cpp
+         ResourceManager.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"./linked_microWorld.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"./linked_microWorld.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"./linked_microWorld.lib" /MACHINE:X64 x64\Debug\Engine.obj
+         x64\Debug\AEntity.obj
+         x64\Debug\main.obj
+         x64\Debug\Map.obj
+         x64\Debug\Person.obj
+         x64\Debug\ResourceManager.obj
+         x64\Debug\Tile.obj
+         linked_microWorld.vcxproj -> C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\./linked_microWorld.exe
+     1>Done Building Project "C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\linked_microWorld.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.00

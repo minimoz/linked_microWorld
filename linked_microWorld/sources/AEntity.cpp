@@ -1,0 +1,48 @@
+#include				"../headers/AEntity.hpp"
+
+AEntity::AEntity() {
+}
+
+
+AEntity::~AEntity() {
+}
+
+//const sf::Texture&		AEntity::getTexture() {
+//	return (_texture);
+//}
+
+const sf::Sprite&		AEntity::getSprite() {
+	return (_sprite);
+}
+
+const sf::Transform&	AEntity::getTransform() {
+	return (_transform);
+}
+
+const std::string&		AEntity::getImgName() {
+	return (_imgName);
+}
+
+//void					AEntity::setTexture(const sf::Texture &texture) {
+//	_texture = texture;
+//}
+
+void					AEntity::setSprite(const sf::Sprite &sprite) {
+	_sprite = sprite;
+}
+
+void					AEntity::setTransform(const sf::Transform &transform) {
+	_transform = transform;
+}
+
+void					AEntity::setImgName(const std::string &imgName) {
+	_imgName = imgName;
+}
+
+int						AEntity::getRandomNb(const int &min, const int &max) {
+	return (((double(std::rand()) / double(RAND_MAX) * (max - min)) + min));
+}
+
+void					AEntity::draw(sf::RenderWindow *window) {
+	window->draw(getSprite()/*, _map.at(i)->getTransform()*/);
+}
