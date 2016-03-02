@@ -2,7 +2,7 @@
 * moz
 */
 
-#ifndef																	RESOURCEMANAGER_HPP__
+#ifndef															RESOURCEMANAGER_HPP__
 # define														RESOURCEMANAGER_HPP__
 
 # include														<iostream>

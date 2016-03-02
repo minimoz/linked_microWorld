@@ -8,13 +8,21 @@
 # include					<iostream>
 
 # include					<SFML/Graphics.hpp>
+# include					<memory>
 
 # define					TILE_SIZE_ 16
+
+//struct					s_color {
+//	int						red;
+//	int						green;
+//	int						blue;
+//	int						alpha;
+//};
 
 class AEntity {
 
 protected:
-	//sf::Texture			_texture;
+	int						_id;
 	sf::Sprite				_sprite;
 	sf::Transform			_transform;
 	std::string				_imgName;
@@ -23,19 +31,18 @@ public:
 	AEntity();
 	~AEntity();
 
-	//const sf::Texture&	getTexture();
-	const sf::Sprite&		getSprite();
-	const sf::Transform&	getTransform();
-	const std::string&		getImgName();
-	//void					setTexture(const sf::Texture &);
+	int						getId();
+	sf::Sprite				*getSprite();
+	const sf::Transform		&getTransform();
+	const std::string		&getImgName();
 	void					setSprite(const sf::Sprite &);
 	void					setTransform(const sf::Transform &);
 	void					setImgName(const std::string &);
 
-	int						getRandomNb(const int &, const int &);
+	int						getRandomNb(int, int);
 	void					draw(sf::RenderWindow *);
 
-	virtual int				init() = 0;
+	virtual void			init() = 0;
 };
 
 #endif						/* AENTITY_HPP__ */

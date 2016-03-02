@@ -1,23 +1,18 @@
 /**
- * moz
- */
+* moz
+*/
 
-#include				<iostream>
+#include					<iostream>
 
-#include				"../headers/Engine.hpp"
-#include				"../headers/Map.hpp"
+#include					"Engine.hpp"
 
-int						main() {
+int							main() {
   std::cout << "Launching..." << std::endl;
 
-  Map					*map = new Map(50, 50);
+  std::unique_ptr<Engine>	engine (new Engine());
 
-  Engine				*engine = new Engine(map);
+  engine->init();
 
-  if (!engine->init()) {
-	  std::cout << "An error occured during the initialization." << std::endl;
-	  //return (-1);
-  }
   engine->launch();
 
   return (0);

@@ -23,7 +23,8 @@
     <ClCompile Include="sources\AEntity.cpp" />
     <ClCompile Include="sources\main.cpp" />
     <ClCompile Include="sources\Map.cpp" />
-    <ClCompile Include="sources\Person.cpp" />
+    <ClCompile Include="sources\PersonBody.cpp" />
+    <ClCompile Include="sources\PersonSpirit.cpp" />
     <ClCompile Include="sources\ResourceManager.cpp" />
     <ClCompile Include="sources\Tile.cpp" />
   </ItemGroup>
@@ -31,7 +32,8 @@
     <ClInclude Include="headers\Engine.hpp" />
     <ClInclude Include="headers\AEntity.hpp" />
     <ClInclude Include="headers\Map.hpp" />
-    <ClInclude Include="headers\Person.hpp" />
+    <ClInclude Include="headers\PersonBody.hpp" />
+    <ClInclude Include="headers\PersonSpirit.hpp" />
     <ClInclude Include="headers\ResourceManager.hpp" />
     <ClInclude Include="headers\Tile.hpp" />
   </ItemGroup>
@@ -85,10 +87,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <SourcePath>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\sources;$(SourcePath)</SourcePath>
     <OutDir>./</OutDir>
+    <IncludePath>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <SourcePath>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\sources;$(SourcePath)</SourcePath>
     <OutDir>./</OutDir>
+    <IncludePath>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

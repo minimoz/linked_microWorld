@@ -2,46 +2,54 @@
  * moz
  */
 
-#ifndef									MAP_HPP__
-# define								MAP_HPP__
+#ifndef											MAP_HPP__
+# define										MAP_HPP__
 
-# include								<iostream>
-# include								<vector>
-# include								<memory>
+# include										<iostream>
+# include										<vector>
+# include										<memory>
 
-# include								<SFML/Graphics.hpp>
+# include										<SFML/Graphics.hpp>
 
-# include								"Tile.hpp"
-# include								"Person.hpp"
+# define										WIDTH_DEFAULT_	50
+# define										HEIGHT_DEFAULT_	50
 
-# define								WIDTH_DEFAULT_	50
-# define								HEIGHT_DEFAULT_	50
+class Tile;
+class PersonBody;
 
-class									Map {
+class											Map {
 
 private:
-  int									_width;
-  int									_height;
-  std::vector<std::shared_ptr<Tile> >	_map;
-  std::vector<std::shared_ptr<Person> >	_persons;
+	int											_width;
+	int											_height;
+	std::vector<std::shared_ptr<Tile> >			_tileMap;
 
 public:
-  Map();
-  Map(const int &, const int &);
-  ~Map();
+	Map();
+	Map(int, int);
+	~Map();
 
-  const int&							getWidth();
-  const int&							getHeight();
+	void										toString();
 
-  int									init();
-  void									update();
-  void									draw(sf::RenderWindow *);
-  int									addPerson();
-  bool									isAnyPersonOnTile(const int &, const int &);
+	int											getWidth() const;
+	int											getHeight() const;
+	const std::vector<std::shared_ptr<Tile>>	&getMap();
+	std::shared_ptr<Tile>						getTile(int, int);
+	std::shared_ptr<Tile>						getTile(int);
+
+	const std::pair<int, int>					convertSmpDimToDblDim(int);
+	int											convertDblDimToSmpDim(int, int);
+
+	void										init();
+	void										update();
+	void										draw(sf::RenderWindow *);
+	void										setPersonOnTile(int, int, const std::shared_ptr<PersonBody> &);
+	void										deletePersonOnTile(int, int);
 
 private:
-  const std::pair<int, int>&			convertSmpDimToDblDim(const int &);
+	bool										isPersonDead(const std::shared_ptr<PersonBody> &);
+
 
 };
 
-#endif									/* MAP_HPP__ */
+#endif											/* MAP_HPP__ */
