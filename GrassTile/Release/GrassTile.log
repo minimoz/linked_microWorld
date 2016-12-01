@@ -1,0 +1,30 @@
+﻿Build started 07/03/2016 15:55:33.
+     1>Project "C:\Users\arthu_000\Google Drive\linked_microWorld\GrassTile\GrassTile.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D GRASSTILE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\GrassTile.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D GRASSTILE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D GRASSTILE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\GrassTile.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GrassTile.cpp
+         GrassTile.cpp
+     1>GrassTile.cpp(10): warning C4273: 'GrassTile::GrassTile_Add' : inconsistent dll linkage
+                 c:\users\arthu_000\google drive\linked_microworld\grasstile\GrassTile.hpp(10) : see previous definition of 'GrassTile_Add'
+     1>GrassTile.cpp(14): warning C4273: 'GrassTile::GrassTile_Subtract' : inconsistent dll linkage
+                 c:\users\arthu_000\google drive\linked_microworld\grasstile\GrassTile.hpp(11) : see previous definition of 'GrassTile_Subtract'
+     1>GrassTile.cpp(18): warning C4273: 'GrassTile::GrassTile_Multiply' : inconsistent dll linkage
+                 c:\users\arthu_000\google drive\linked_microworld\grasstile\GrassTile.hpp(12) : see previous definition of 'GrassTile_Multiply'
+     1>GrassTile.cpp(22): warning C4273: 'GrassTile::GrassTile_Divide' : inconsistent dll linkage
+                 c:\users\arthu_000\google drive\linked_microworld\grasstile\GrassTile.hpp(13) : see previous definition of 'GrassTile_Divide'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.lib" /MACHINE:X86 /SAFESEH /DLL Release\dllmain.obj
+         Release\GrassTile.obj
+         Release\stdafx.obj
+            Creating library C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.lib and object C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.exp
+         Generating code
+         Finished generating code
+         GrassTile.vcxproj -> C:\Users\arthu_000\Google Drive\linked_microWorld\Release\GrassTile.dll
+     1>Done Building Project "C:\Users\arthu_000\Google Drive\linked_microWorld\GrassTile\GrassTile.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.37

@@ -1,30 +1,31 @@
-﻿Build started 01/03/2016 19:30:25.
+﻿Build started 17/03/2016 10:31:03.
      1>Project "C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\linked_microWorld.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt sources\Engine.cpp sources\Map.cpp sources\PersonBody.cpp sources\PersonSpirit.cpp sources\main.cpp
-         Engine.cpp
-     1>sources\Engine.cpp(20): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>sources\Engine.cpp(100): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
-         Map.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt sources\PersonBody.cpp
          PersonBody.cpp
-     1>sources\PersonBody.cpp(59): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-     1>sources\PersonBody.cpp(85): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         PersonSpirit.cpp
-         main.cpp
+     1>sources\PersonBody.cpp(73): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+     1>sources\PersonBody.cpp(101): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"./linked_microWorld.exe" /NOLOGO /LIBPATH:"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"./linked_microWorld.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"./linked_microWorld.lib" /MACHINE:X64 x64\Release\Engine.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"./linked_microWorld.exe" /NOLOGO /LIBPATH:"C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"./linked_microWorld.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"./linked_microWorld.lib" /MACHINE:X64 x64\Release\AIv1.obj
+         x64\Release\APrimaryItem.obj
+         x64\Release\Engine.obj
          x64\Release\AEntity.obj
+         x64\Release\GrassTile.obj
          x64\Release\main.obj
          x64\Release\Map.obj
+         x64\Release\MapGenerator.obj
+         x64\Release\PathFinding.obj
          x64\Release\PersonBody.obj
          x64\Release\PersonSpirit.obj
          x64\Release\ResourceManager.obj
          x64\Release\Tile.obj
+         x64\Release\WaterItem.obj
          Generating code
+     1>c:\users\arthu_000\google drive\linked_microworld\linked_microworld\sources\engine.cpp(121): warning C4715: 'Engine::getText' : not all control paths return a value
          Finished generating code
          linked_microWorld.vcxproj -> C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\./linked_microWorld.exe
      1>Done Building Project "C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\linked_microWorld.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.99
+Time Elapsed 00:00:03.01

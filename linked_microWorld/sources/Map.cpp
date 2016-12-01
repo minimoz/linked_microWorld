@@ -5,6 +5,7 @@
 #include									"Map.hpp"
 #include									"Tile.hpp"
 #include									"PersonBody.hpp"
+#include									"MapGenerator.hpp"
 
 Map::Map() {
   _width = WIDTH_DEFAULT_;
@@ -56,18 +57,26 @@ int											Map::convertDblDimToSmpDim(int x, int y) {
 	return (y * _width + x);
 }
 
+int											Map::distance(int x1, int y1, int x2, int y2) {
+	return (abs(x1 - x2) + abs(y1 - y2));
+}
+
+int											Map::distance(int coord1, int coord2) {
+	std::pair<int, int>						pair1 = convertSmpDimToDblDim(coord1);
+	std::pair<int, int>						pair2 = convertSmpDimToDblDim(coord2);
+
+	return (distance(pair1.first, pair1.second, pair2.first, pair2.second));
+}
+
 void										Map::init() {
+	MapGenerator							*mapGenerator = new MapGenerator(_width, _height);
+
 	std::cout << "Width: " << _width << std::endl;
 	std::cout << "Height: " << _height << std::endl;
 
-	for (int i = 0; i < _width * _height; ++i) {
-		std::shared_ptr<Tile> tile(new Tile("grass.png", i));
-		tile->init();
-		tile->setPosition(convertSmpDimToDblDim(i));
-		_tileMap.push_back(tile);
-	}
+	mapGenerator->generate(_tileMap);
 
-	//std::cout << sizeof((*this->_map[99])) << std::endl;
+	//std::cout << sizeof((*_map[99])) << std::endl;
 }
 
 void										Map::update() {

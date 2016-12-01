@@ -30,6 +30,10 @@ const std::vector<std::pair<std::string, sf::Texture *> >&					ResourceManager::
 	return (_textures);
 }
 
+const std::vector<std::pair<std::string, sf::Font *> >&						ResourceManager::getFonts() {
+	return (_fonts);
+}
+
 /**
 * Check if the texture existe in the vector
 * if yes, just return it
@@ -53,4 +57,24 @@ const sf::Texture															*ResourceManager::getTexture(const std::string& 
 	std::cout << "ERROR: image not found. Filled with an empty texture." << std::endl;
 	_textures.push_back(std::pair<std::string, sf::Texture *>(imgName, new sf::Texture()));
 	return (_textures.back().second);
+}
+
+const sf::Font																*ResourceManager::getFont(const std::string& fontName) {
+	for (std::vector<std::pair<std::string, sf::Font *> >::iterator it = _fonts.begin(); it != _fonts.end(); ++it) {
+		if (it->first == fontName) {
+			//std::cout << "DEBUG_MSG: using existing font." << std::endl;
+			return (it->second);
+		}
+	}
+
+	sf::Font																*font = new sf::Font();
+	if (font->loadFromFile(fontName)) {
+		_fonts.push_back(std::pair<std::string, sf::Font *>(fontName, font));
+		//std::cout << "DEBUG_MSG: loading image." << std::endl;
+		return (_fonts.back().second);
+	}
+
+	std::cout << "ERROR: font not found. Filled with an empty font." << std::endl;
+	_fonts.push_back(std::pair<std::string, sf::Font *>(fontName, new sf::Font()));
+	return (_fonts.back().second);
 }

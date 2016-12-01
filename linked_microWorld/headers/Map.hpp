@@ -39,6 +39,8 @@ public:
 
 	const std::pair<int, int>					convertSmpDimToDblDim(int);
 	int											convertDblDimToSmpDim(int, int);
+	int											distance(int, int, int, int);
+	int											distance(int, int);
 
 	void										init();
 	void										update();

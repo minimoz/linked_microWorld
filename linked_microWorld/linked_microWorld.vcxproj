@@ -19,23 +19,40 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="sources\AIv1.cpp" />
+    <ClCompile Include="sources\APrimaryItem.cpp" />
     <ClCompile Include="sources\Engine.cpp" />
     <ClCompile Include="sources\AEntity.cpp" />
+    <ClCompile Include="sources\GrassTile.cpp" />
     <ClCompile Include="sources\main.cpp" />
     <ClCompile Include="sources\Map.cpp" />
+    <ClCompile Include="sources\MapGenerator.cpp" />
+    <ClCompile Include="sources\PathFinding.cpp" />
     <ClCompile Include="sources\PersonBody.cpp" />
     <ClCompile Include="sources\PersonSpirit.cpp" />
     <ClCompile Include="sources\ResourceManager.cpp" />
     <ClCompile Include="sources\Tile.cpp" />
+    <ClCompile Include="sources\WaterItem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\AIv1.hpp" />
+    <ClInclude Include="headers\APrimaryItem.hpp" />
     <ClInclude Include="headers\Engine.hpp" />
     <ClInclude Include="headers\AEntity.hpp" />
+    <ClInclude Include="headers\GrassTile.hpp" />
+    <ClInclude Include="headers\Iitem.hpp" />
     <ClInclude Include="headers\Map.hpp" />
+    <ClInclude Include="headers\MapGenerator.hpp" />
+    <ClInclude Include="headers\PathFinding.hpp" />
     <ClInclude Include="headers\PersonBody.hpp" />
     <ClInclude Include="headers\PersonSpirit.hpp" />
     <ClInclude Include="headers\ResourceManager.hpp" />
     <ClInclude Include="headers\Tile.hpp" />
+    <ClInclude Include="headers\WaterItem.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="maps\map_test.map" />
+    <None Include="maps\map_test2.map" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9466B939-D913-4E85-8307-96EDC1B7339D}</ProjectGuid>
@@ -99,7 +116,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include;C:\Users\arthu_000\Google Drive\linked_microWorld\GrassTile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -128,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\arthu_000\Google Drive\linked_microWorld\linked_microWorld\SFML-2.3.2\include;C:\Users\arthu_000\Google Drive\linked_microWorld\GrassTile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

@@ -31,10 +31,11 @@ public:
 	AEntity();
 	~AEntity();
 
-	int						getId();
+	const int				getId() const;
 	sf::Sprite				*getSprite();
 	const sf::Transform		&getTransform();
 	const std::string		&getImgName();
+	const sf::Color			&getColor();
 	void					setSprite(const sf::Sprite &);
 	void					setTransform(const sf::Transform &);
 	void					setImgName(const std::string &);

@@ -11,7 +11,8 @@
 
 # include														<SFML/Graphics.hpp>
 
-# define														PATH_IMAGES_ "images/"
+# define														PATH_IMAGES_	"images/"
+# define														FONT_PATH_		"fonts/"
 
 class ResourceManager {
 
@@ -24,14 +25,15 @@ private:
 
 	static ResourceManager										*_instance;
 	std::vector<std::pair<std::string, sf::Texture *> >			_textures;
+	std::vector<std::pair<std::string, sf::Font *> >			_fonts;
 
 public:
 	static ResourceManager										*getInstance();
 	const std::vector<std::pair<std::string, sf::Texture *> >&	getTextures();
-	const sf::Texture											*getTexture(const std::string&);
-	int															addTexture(const std::string&);
-	//void	setTextures(std::vector<std::shared_ptr<std::pair<std::string, sf::Texture> > > textures);
+	const std::vector<std::pair<std::string, sf::Font *> >&		getFonts();
 
+	const sf::Texture											*getTexture(const std::string&);
+	const sf::Font												*getFont(const std::string&);
 };
 
 #endif															/* RESOURCEMANAGER_HPP__ */

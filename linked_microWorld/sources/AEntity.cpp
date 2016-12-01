@@ -11,7 +11,7 @@ AEntity::AEntity() {
 AEntity::~AEntity() {
 }
 
-int						AEntity::getId() {
+const int				AEntity::getId() const {
 	return (_id);
 }
 
@@ -25,6 +25,10 @@ const sf::Transform		&AEntity::getTransform() {
 
 const std::string		&AEntity::getImgName() {
 	return (_imgName);
+}
+
+const sf::Color			&AEntity::getColor() {
+	return (_sprite.getColor());
 }
 
 void					AEntity::setSprite(const sf::Sprite &sprite) {
